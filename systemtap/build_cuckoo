@@ -1,0 +1,251 @@
+---https://github.com/cuckoosandbox/cuckoo/issues/1879---
+---build cuckoo from source---
+$ python stuff/monitor.py
+$ python setup.py sdist develop
+
+
+
+---https://cuckoo.sh/docs/installation/host/requirements.html----
+---requirement
+---Installing Python libraries (on Ubuntu/Debian-based distributions)
+$ sudo yum groupinstall "Development Tools"  # build-essential
+$ sudo yum install python python-pip python-devel libffi-devel openssl-devel
+$ sudo yum install python-virtualenv python-setuptools
+$ sudo yum install libjpeg-devel zlib1g-dev swig
+
+## No package zlib1g-dev available->
+## yum install zlib
+## yum install zlib-devel
+
+$ sudo yum install mongodb
+$ sudo yum install postgresql libpq-dev
+
+## No package libpq-dev available->
+## yum install postgresql-devel
+
+---Installing tcpdump
+$ sudo yum install tcpdump
+$ sudo setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump
+
+---Installing M2Crypto
+$ sudo pip install m2crypto==0.24.0
+
+# if "ERROR"-- 
+Setup script exited with error in cryptography setup command: Invalid environment marker: python_version < '3' 
+=> pip install cryptography
+
+
+---http://www.syscom.com.tw/Print_Preview.aspx?id=446&Group=3---
+Chinese Document
+
+
+http://blog.csdn.net/lopng/article/details/72821438
+$ sudo apt-get install uml-utilities bridge-utils
+
+=======================================================================
+========================Linux guest OS=================================
+=======================================================================
+CentOS 7 安装 tunctl
+1.  Create the repository config file /etc/yum.repos.d/nux-misc.repo
+[nux-misc]  
+name=Nux Misc  
+baseurl=http://li.nux.ro/download/nux/misc/el7/x86_64/  
+enabled=0  
+gpgcheck=1  
+gpgkey=http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro  
+2. Install tunctl rpm package
+# yum --enablerepo=nux-misc install tunctl  
+
+======================================================================
+https://unix.stackexchange.com/questions/255484/how-can-i-bridge-two-interfaces-with-ip-iproute2
+======================================================================
+$ sudo ip link add name br0 type bridge
+$ sudo tunctl -b -u sandbox -t tap_33_1
+$ sudo ip link set tap_33_1 master br0
+$ sudo ip link set dev tap_33_1
+$ sudo ip link set dev br0 up
+
+$ sudo crontab -e
+@reboot python path_to_agent.py
+
+The error (2003) Can't connect to MySQL server 
+https://dev.mysql.com/doc/refman/5.7/en/can-not-connect-to-server.html 
+https://dev.mysql.com/doc/refman/5.7/en/starting-server.html
+-> systemctl start mysqld
+
+
+======================================================================
+if yum can't find some package.
+======================================================================
+yum provides nmblookup 
+yum provides *bin/nmblookup
+
+
+dsn = esx://bbmac-esx33.sjc1/?no_verify=1
+username = bbmac_service
+password = Tr3ndM!cr0
+
+======================================================================
+only download package
+======================================================================
+$ yum install yum-utils
+$ yumdownloader <package>
+
+======================================================================
+close firewalld (port 22)
+======================================================================
+for centOS:
+$systemctl disable firewalld
+$systemctl stop firewalld
+$systemctl status firewalld
+----------------------------------------------------------------------
+for ubuntu:
+sudo apt-get install openssh-server
+https://www.cyberciti.biz/faq/ubuntu-server-disable-firewall/
+
+======================================================================
+Preventing PackageKit to lock yum
+======================================================================
+vim /etc/PackageKit/PackageKit.conf
+DefaultBackend=nobackend
+----------------------------------------------------------------------
+yum remove PackageKit
+
+
+======================================================================
+Could not find STAP LKM, falling back to strace.
+https://github.com/cuckoosandbox/cuckoo/issues/827
+======================================================================
+Install dependencies inside of the virtual machine:
+sudo apt-get install systemtap gcc linux-headers-$(uname -r)
+----------------------------------------------------------------------
+Install kernel debugging symbols:
+sudo debuginfo-install kernel
+----------------------------------------------------------------------
+Patch SystemTap tapset (this will change in the future):
+$ wget https://raw.githubusercontent.com/cuckoosandbox/cuckoo/master/stuff/systemtap/expand_execve_envp.patch
+$ wget https://raw.githubusercontent.com/cuckoosandbox/cuckoo/master/stuff/systemtap/escape_delimiters.patch 
+(xxxxx fail https://github.com/cuckoosandbox/cuckoo/issues/1911)
+https://raw.githubusercontent.com/daanfs/cuckoo/694b92a10c626ba1326a5fe9560bd7e90dcf2927/stuff/systemtap/escape_delimiters.patch (oooo suc)
+$ sudo patch /usr/share/systemtap/tapset/linux/sysc_execve.stp < expand_execve_envp.patch
+$ sudo patch /usr/share/systemtap/tapset/uconversions.stp < escape_delimiters.patch
+----------------------------------------------------------------------
+Compile Kernel extension:
+$ wget https://raw.githubusercontent.com/cuckoosandbox/cuckoo/master/stuff/systemtap/strace.stp
+$ sudo stap -p4 -r $(uname -r) strace.stp -m stap_ -v (https://access.redhat.com/articles/882463)
+(https://sourceware.org/systemtap/man/stap.1.html)
+----------------------------------------------------------------------                                                  
+Test Kernel extension:
+$ sudo staprun -v ./stap_.ko 
+output: staprun:insert_module:x Module stap_ inserted from file path_to_stap_.ko
+----------------------------------------------------------------------
+The stap_.ko file should be placed in /root/.cuckoo:
+$ sudo mkdir /root/.cuckoo
+$ sudo mv stap_.ko /root/.cuckoo/
+----------------------------------------------------------------------
+Disable firewall inside of the vm, if exists:
+ufw disable
+
+
+created a new linux module "wget"
+https://github.com/cuckoosandbox/cuckoo/pull/761
+
+======================================================================
+Parse all.stap- interpreter PID isn't logged. 
+======================================================================
+repeatdly deal with interpreter process log
+in "strace.stp"
+in "/home/sandbox/cuckoo/cuckoo/processing/platform/linux.py" (parser)
+
+
+======================================================================
+SystemStap
+======================================================================
+kprobe
+
+
+======================================================================
+Other APP
+======================================================================
+for 32 bit: (centos)
+$ yum -y install glibc.i686 glibc_x86_64 glibc-devel.x86_64 glibc-devel.i686
+----------------------------------------------------------------------
+for 32 bit: (ubuntu)
+$ sudo apt-get install gcc-multilib
+
+
+======================================================================
+ubuntu 14.04.1
+======================================================================
+1. Disable firewall: $ ufw disable
+2. for 32 bit: $ sudo apt-get install gcc-multilib g++-multilib.
+	$ install build-essential gcc-multilib gcc-4.8-multilib g++-multilib g++-4.8-multilib lib32z1 lib32ncurses5 lib32bz2-1.0 libc6-dev libgmp-dev libmpfr-dev libmpc-dev
+3. Install dependencies inside of the virtual machine:
+	sudo apt-get install systemtap gcc linux-headers-$(uname -r)
+	@ test- systemtap: sudo stap -ve 'probe begin { log("hello world") exit() }
+4. for port 22: $ sudo apt-get install openssh-server
+5. mv agent.py
+	$ sudo crontab -e
+	@reboot python path_to_agent.py
+6. Compile Kernel extension:
+	$ wget https://raw.githubusercontent.com/cuckoosandbox/cuckoo/master/stuff/systemtap/strace.stp
+	$ sudo stap -p4 -r $(uname -r) strace.stp -m stap_ -v (https://access.redhat.com/articles/882463)
+		for test:
+		$ sudo staprun -v ./stap_.ko 
+		output: staprun:insert_module:x Module stap_ inserted from file path_to_stap_.ko
+		$ staprun -vv -x (pid) -o (outputFile) ./stap_.ko 
+
+
+ERROR: user string copy fault -14 at 00007f5f960f3503 near identifier 'user_string_n' at /usr/share/systemtap/tapset/uconversions.stp
+	@ try: Install kernel debugging symbols: https://wiki.ubuntu.com/Debug%20Symbol%20Packages 
+	https://wiki.ubuntu.com/Kernel/Systemtap(x not useful)
+	https://github.com/developerworks/blog/blob/master/docs/elixir/ubuntu-systemtap.md (work systemtap 3.0)
+	apt-get install g++
+	apt-get install zlib1g-dev  
+	apt-get nstall m4
+
+	(sudo apt-get install -y zlib1g-dev libdw-dev g++ gcc make m4 gettext libcap-dev linux-headers-$(uname -r) )
+
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C8CAB6595FDFF622
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ECDCAD72428D7C01 
+	添加更新源到 /etc/apt/sources.list.d/ddebs.list 文件
+
+	codename=$(lsb_release -c | awk  '{print $2}')
+
+	sudo tee /etc/apt/sources.list.d/ddebs.list << EOF
+	deb http://ddebs.ubuntu.com/ ${codename}          main restricted universe multiverse
+	deb http://ddebs.ubuntu.com/ ${codename}-security main restricted universe multiverse
+	deb http://ddebs.ubuntu.com/ ${codename}-updates  main restricted universe multiverse
+	deb http://ddebs.ubuntu.com/ ${codename}-proposed main restricted universe multiverse
+	EOF
+	更新,安装调试符号
+
+	sudo apt-get update
+	sudo apt-get install linux-image-$(uname -r)-dbgsym
+	从源码编译 SystemTap
+
+	sudo apt-get remove systemtap
+	wget https://fedorahosted.org/releases/e/l/elfutils/0.166/elfutils-0.166.tar.bz2
+	wget https://sourceware.org/elfutils/ftp/0.166/elfutils-0.166.tar.bz2
+	wget https://sourceware.org/systemtap/ftp/releases/systemtap-3.0.tar.gz
+	tar jxf elfutils-0.166.tar.bz2
+	tar zxf systemtap-3.0.tar.gz
+	cd systemtap-3.0
+	./configure --with-elfutils=../elfutils-0.166
+	make
+	sudo make install
+
+
+
+
+curl http://localhost:8090/tasks/delete/1
+
+
+======================================================================
+systemtap
+======================================================================
+<kernel module open read write>
+http://guochongxin.github.io/driver/filp_close/filp_open/get_fs/kernel/kernel_ds/linux/mm_segment_t/%E6%97%A5%E5%BF%97/set_fs/user_ds/vfs/vfs_read/vfs_write/2014/05/22/linux_vfs_operate_file_module
+----------------------------------------------------------------------
+<kernel module header location>
+/lib/modules/$(uname -r)/build/include/linux
