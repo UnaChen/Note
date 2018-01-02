@@ -1,0 +1,33 @@
+%{
+#include <linux/module.h>
+#include <linux/kernel.h>
+#include <linux/kmod.h>
+%}
+
+probe begin  {
+	printf("start...%s\n", report(gettimeofday_us()))	
+	readfile("start")
+}
+probe error {
+	println("Oops, errors occurred. Here's a report anaway")
+	exit()
+}
+probe end{
+	printf("exit!\n")
+	readfile("end")
+}
+
+probe nd_syscall.open{
+	readfile(argstr)
+}
+
+function report:string(then){
+	prefix = sprintf("%s.%06d",ctime(then/1000000),then%1000000)
+	return(prefix)
+}
+
+function readfile:long(val) %{
+	usermodehelperAPI...
+%}
+
+

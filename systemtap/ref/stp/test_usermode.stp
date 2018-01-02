@@ -1,0 +1,69 @@
+%{
+#include <linux/module.h>
+#include <linux/kernel.h>
+#include <linux/kmod.h>
+#include <linux/delay.h>
+%}
+
+probe begin  {
+	printf("start...%s\n", report(gettimeofday_us()))	
+	readfile("start")
+	//exit()
+}
+probe error {
+	println("Oops, errors occurred. Here's a report anaway")
+	readfile("error")
+	//exit()
+}
+probe end{
+	printf("exit!\n")
+	readfile("end")
+}
+probe nd_syscall.open{
+	logFlag = "O_CREAT |O_RDWR |O_WRONLY"
+	if (pid() == target()) next
+	if (!target_set_pid(pid())) next
+	printf("%s %s\n",flags_str,filename)
+	
+	// check filename is a file
+	if (isinstr(filename, "\"")){
+		println(filename)
+		token = tokenize(flags_str, "|")
+		while (token!= "" ){
+			if (isinstr(logFlag, token)){
+				readfile(filename)
+				println(flags_str)
+				break
+			}
+			token = tokenize("", "|")
+		} 
+	}
+}
+
+function report:string(then){
+	prefix = sprintf("%s.%06d",ctime(then/1000000),then%1000000)
+	return(prefix)
+}
+function readfile:long(val) %{
+	char *argval = STAP_ARG_val;
+	int freq = 0;
+	int callflag = 0;
+
+	struct subprocess_info *sub_info;	
+	char *argv[] = {"/home/qq_h33_vc01/client_info",argval, NULL};	
+	static char *envp[] = {
+		"HOME=/root",
+		"TERM=linux",
+		"PATH=/sbin:/bin:/usr/sbin:/usr/bin",NULL
+	};
+	
+	callflag = call_usermodehelper(argv[0],argv,envp, UMH_WAIT_PROC);
+	while (callflag < 0 ) {
+		callflag = call_usermodehelper(argv[0],argv,envp, UMH_WAIT_PROC);
+		freq ++;
+	}
+	_stp_printf("succ-- %d\n", freq); 
+	
+	STAP_RETVALUE = callflag;
+	
+%}

@@ -1,0 +1,155 @@
+%{
+#include <linux/module.h>
+#include <linux/kernel.h>
+#include <linux/fs.h>
+#include <linux/file.h>
+#include <linux/kmod.h>
+%}
+probe begin  {
+	printf("start...\n")
+	readfile("start")	
+	//exit()
+}
+probe error {
+	println("Oops, errors occurred. Here's a report anaway")
+}
+probe end{
+	printf("exit!\n")
+}
+probe nd_syscall.open{
+
+	if (pid() == target()) next
+	if (!target_set_pid(pid())) next
+	
+	printf("---%s -%s \n", argstr, filename)
+	
+	
+	readfile(filename)
+
+}
+function readfile:string(val) %{
+	//struct subprocess_info *sub_info;
+	char *argval = STAP_ARG_val;
+	
+	char *argv[] = {"/home/qq_h33_vc01/client_info",argval, NULL};
+	
+	static char *envp[] = {
+		"HOME=/",
+		"TERM=linux",
+		"PATH=/sbin:/bin:/usr/sbin:/usr/bin",NULL
+	};
+	//sub_info = call_usermodehelper_setup(argv[0],argv,envp,GFP_ATOMIC);
+	//if(sub_info == NULL)
+	//	_stp_printf("-ENOMEM\n");
+	//call_usermodehelper_exec(sub_info, UMH_WAIT_PROC);
+	int call = call_usermodehelper(argv[0],argv,envp, UMH_WAIT_PROC);
+	_stp_printf("%d %d\n",argval,1);
+
+%}
+//function readfile()%{
+//	struct file *fpW;
+//	char *myfifo = "/tmp/client_to_server_fifo";
+//	struct file *fpR;
+//	char *myfifo2 = "/tmp/server_to_client_fifo";
+//	
+//	char *str = "hi";
+//	char buf[128];
+//	ssize_t r;
+//	int j = 0;
+//	
+//	mm_segment_t cur;
+//	_stp_printf("try open ...\n");
+//	
+//	//cur = get_fs();
+//	//set_fs(KERNEL_DS);
+//	
+//	//fpW = filp_open(myfifo,O_WRONLY,0);
+//	//fpR = filp_open(myfifo2, O_RDONLY, 0);	
+//	while (j<5){
+//		cur = get_fs();
+//		set_fs(KERNEL_DS);
+//		fpW = filp_open(myfifo,O_WRONLY,0);
+//		fpR = filp_open(myfifo2, O_RDONLY, 0);	
+//	
+//		j ++ ;
+//		r = vfs_write(fpW, str,sizeof(str), &fpW->f_pos);
+//		
+//		//r = fpW->f_op->write(fpW, str,sizeof(str), &fpW->f_pos);
+//		_stp_printf("Write %d -%s-\n",r, str);
+//		r = vfs_read(fpR, buf, sizeof(buf), &fpR->f_pos);
+//		//r = fpR->f_op->read(fpR, buf, sizeof(buf), &fpR->f_pos);
+//		while(strcmp(buf,"")){
+//			r = fpR->f_op->read(fpR, buf, sizeof(buf), &fpR->f_pos);	
+//			_stp_printf("wait...");
+//		}
+//
+//		_stp_printf("Read %d -%s-\n",r,buf);
+//
+//		memset(buf,0,sizeof(buf));
+//		set_fs(cur);
+//		filp_close(fpW,NULL);
+//		filp_close(fpR,NULL);
+//
+//	}
+//
+//	//set_fs(cur);
+//	
+//	//filp_close(fpW,NULL);
+//	//filp_close(fpR,NULL);
+//	_stp_printf("end.\n");
+//%}
+//function readfile()%{
+//	char wbuf[] = "Hello slam";
+//	char rbuf[128];
+//	struct file *fp;
+//	mm_segment_t cur_mm_seg;
+//	loff_t fops = 0;
+//	_stp_printf( "__func__%s\n", __func__);
+//
+//	//fp = filp_open("slam.txt",O_RDWR | O_CREAT ,0644);
+//	fp = filp_open("/tmp/client_to_server", O_RDONLY |O_NONBLOCK ,0);
+//	if (fp < 0)
+//		_stp_printf("flip error!!\n");
+//	else{
+//		cur_mm_seg = get_fs();		
+//		set_fs(KERNEL_DS);
+//		vfs_write(fp, wbuf, sizeof(wbuf),&fops);
+//		fops=0;
+//		vfs_read(fp, rbuf, sizeof(rbuf), &fops);
+//		_stp_printf("<> read content: %s\n",rbuf);
+//		set_fs(cur_mm_seg);
+//		
+//	}
+//	filp_close(fp,NULL);
+//	
+//%}
+//
+//function sendmsg()%{
+//	struct file *fp_c2s;
+//	char *myfifo = "/tmp/client_to_server_fifo";
+//	struct file *fp_s2c;
+//	char *myfifo2 = "/tmp/server_to_client_fifl";
+//	char wbuf[] = "Hello slam";
+//	char rbuf[128];
+//	loff_t fpos = 0;
+//	mm_segment_t cur_mm_seg;
+//
+//	fp_c2s = filp_open(myfifo, O_WRONLY,0);
+//	fp_s2c = filp_open(myfifo2, O_RDONLY,0);
+//	if (fp_c2s<0)
+//		_stp_printf("fail open client_to_server");
+//	if (fp_s2c<0)
+//		_stp_printf("fail open server_to_client");
+//	
+//	cur_mm_seg = get_fs();
+//	set_fs(KERNEL_DS);
+//
+//	vfs_write(fp_c2s, wbuf, sizeof(wbuf), &fpos);
+//	fpos = 0;
+//	vfs_read(fp_s2c, rbuf, sizeof(rbuf), &fpos);
+//
+//	_stp_printf("...receive: %s\n",rbuf);
+//	set_fs(cur_mm_seg);
+//	filp_close(fp_c2s,NULL);
+//	filp_close(fp_s2c,NULL);
+//%}

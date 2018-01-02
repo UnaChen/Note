@@ -1,0 +1,217 @@
+/****** for kfifo ******/
+%{
+#include <linux/module.h>
+#include <net/sock.h>
+#include <linux/netlink.h>
+#include <linux/skbuff.h>
+#include <linux/semaphore.h>
+#include <linux/delay.h>
+#define NETLINK_USER 31
+
+    int pid_global;
+    int flag_init = 0;
+    static struct semaphore sem;
+    struct sock *nl_sk = NULL;
+
+    static void hello_nl_recv_msg(struct sk_buff * skb)
+    {
+
+        struct nlmsghdr *nlh;
+
+        _stp_printf(KERN_INFO "Entering: %s\n", __FUNCTION__);
+
+        nlh = (struct nlmsghdr *)skb->data;
+        _stp_printf(KERN_INFO "Netlink received msg payload:%s\n", (char *)nlmsg_data(nlh));
+	up(&sem);
+        //pid = nlh->nlmsg_pid; /*pid of sending process */
+        /*if (flag_init == 0) {
+            pid_global = pid;
+            flag_init = 1;
+            _stp_printf("flag_init: %d\n", flag_init);
+        } else {
+            up(&sem);
+            _stp_printf("flag_init up: %d\n", pid);
+        }*/
+    }
+
+    static void hello_send(char *msg, int pid) {
+        //int pid = pid_global;
+        struct nlmsghdr *nlh;
+        struct sk_buff *skb_out;
+        int msg_size;
+        //char *msg = "Hello from kernel";
+        int res;
+
+        _stp_printf("pid %d\n", pid);
+
+        msg_size = strlen(msg);
+
+        skb_out = nlmsg_new(msg_size, 0);
+        if (!skb_out) {
+            _stp_printf(KERN_ERR "Failed to allocate new skb\n");
+            return;
+        }
+
+        nlh = nlmsg_put(skb_out, 0, 0, NLMSG_DONE, msg_size, 0);
+        NETLINK_CB(skb_out).dst_group = 0;
+        strncpy(nlmsg_data(nlh), msg, msg_size);
+
+        res = nlmsg_unicast(nl_sk, skb_out, pid);
+        if (res < 0)
+            _stp_printf(KERN_INFO "Error while sending bak to user\n");
+
+    }
+
+    static int hello_init(void)
+    {
+        //nl_sk = netlink_kernel_create(&init_net, NETLINK_USER, 0, hello_nl_recv_msg, NULL, THIS_MODULE);
+        struct netlink_kernel_cfg cfg = {
+            .groups = 1,
+            .input = hello_nl_recv_msg,
+        };
+        _stp_printf("Entering: %s\n", __FUNCTION__);
+
+        nl_sk = netlink_kernel_create(&init_net, NETLINK_USER, &cfg);
+        if (!nl_sk) {
+            _stp_printf(KERN_ALERT "Error creating socket.\n");
+            return -10;
+        }
+        sema_init(&sem, 0);
+        //down(&sem);
+        return 0;
+    }
+
+%}
+/* Copyright (C) 2015-2017 Cuckoo Foundation.
+ # This file is part of Cuckoo Sandbox - http://www.cuckoosandbox.org
+ # See the file 'docs/LICENSE' for copying permission.
+ #
+ # Based on the Systemtap "strace.stp" example, adapted to our needs
+ */
+
+/* configuration options; set these with stap -G */
+global timestamp = 1     /* -Gtimestamp=0 means don't print a syscall timestamp */
+
+global thread_argstr%
+global thread_scname%
+global thread_time%
+
+global syscalls_nonreturn
+probe begin  {
+    /* list those syscalls that never .return */
+    syscalls_nonreturn["exit"] = 1
+    syscalls_nonreturn["exit_group"] = 1
+    /* prepare for netlink  */    
+    printf("start...\n")
+    func_init()
+}
+
+probe end {
+    func_exit()
+    printf("[SUCC_MSG] END\n");
+}
+
+probe error {
+    func_exit()
+    printf("[ERROR_MSG] ERROR END\n");
+}
+
+probe nd_syscall.* {
+    if (pid() == target()) next         # skip our own helper process
+    if (!target_set_pid(pid())) next    # skip unrelated processes
+
+    t = tid()
+    if (name == "unlink"){
+    pipe_out (name, argstr, "NON")
+    }
+
+    /* last syscall that could've returned didn't */
+    if (thread_argstr[t] != "")
+        report(thread_scname[t], thread_argstr[t], "")
+
+    thread_argstr[t] = argstr
+    thread_scname[t] = name
+
+    if (timestamp)
+        thread_time[t] = gettimeofday_us()
+
+    if (name in syscalls_nonreturn)
+        report(name, argstr, "")
+}
+
+probe nd_syscall.*.return {
+    if (pid() == target()) next         # skip our own helper process
+    if (!target_set_pid(pid())) next    # skip unrelated processes
+    if (name == "open"){
+        pipe_out (name, thread_argstr[tid()], retstr)
+    }           
+    
+    report(name, thread_argstr[tid()], retstr)
+}
+
+function report(syscall_name, syscall_argstr, syscall_retstr) {
+    t = tid()
+
+    if (timestamp) {
+        then = thread_time[t]
+
+        if (timestamp)
+            prefix = sprintf("%s.%06d ", ctime(then / 1000000), then % 1000000)
+
+        delete thread_time[t]
+    }
+
+    /* add a thread-id string in lots of cases, except if
+       stap strace.stp -c SINGLE_THREADED_CMD */
+    if (tid() != target()) {
+        prefix .= sprintf("%s@%x[%d] ", execname(), uaddr(), t)
+    }
+
+    syscall_argstr = str_replace(syscall_argstr, "(", "\\x28")
+    syscall_argstr = str_replace(syscall_argstr, ")", "\\x29")
+
+    if (syscall_retstr == "")
+        printf("%s%s(%s)\n", prefix, syscall_name, syscall_argstr)
+    else
+        printf("%s%s(%s) = %s\n", prefix, syscall_name, syscall_argstr, syscall_retstr)
+
+    delete thread_argstr[t]
+    delete thread_scname[t]
+}
+
+function pipe_out(syscall_name, syscall_argstr, syscall_retstr){
+    msg_str = syscall_name."==".syscall_argstr."==".syscall_retstr
+    send_msg(msg_str, target())
+    sem_wait()
+}
+
+function func_init() %{
+    int init_netlink = hello_init();
+    if (init_netlink < 0)
+        _stp_printf("--- INIT ERROR ---\n");
+    _stp_printf("--- INIT FIN ---\n");
+%}
+
+function func_exit() %{
+    netlink_kernel_release(nl_sk);
+    _stp_printf("exiting hello module\n");
+%}
+
+function send_msg(argmsg, argpid) %{
+    char *msg = STAP_ARG_argmsg;
+    int pid = STAP_ARG_argpid;
+    hello_send(msg, pid);
+%}
+
+function sem_wait() %{
+    down(&sem);
+%}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1435 @@
+start...
+Entering: hello_init
+--- INIT FIN ---
+Thu Dec 28 13:36:39 2017.475901 python@7fa63abe57d3[13244] set_robust_list(0x7fa63b3cfa20, 24) = 0
+Thu Dec 28 13:36:39 2017.476392 python@7fa63abed76d[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.476581 python@7fa63a1d2557[13244] execve("/usr/local/sbin/python", ["python", "mal.py"], ["XDG_SESSION_ID=1", "HOSTNAME=33_1", "SELINUX_ROLE_REQUESTED=", "TERM=xterm", "SHELL=/bin/bash", "HISTSIZE=1000", "SSH_CLIENT=192.168.33.2 47614 22", "SELINUX_USE_CURRENT_RANGE=", "SSH_TTY=/dev/pts/0", "USER=root", "LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.476708 python@7fa63a1d2557[13244] execve("/usr/local/bin/python", ["python", "mal.py"], ["XDG_SESSION_ID=1", "HOSTNAME=33_1", "SELINUX_ROLE_REQUESTED=", "TERM=xterm", "SHELL=/bin/bash", "HISTSIZE=1000", "SSH_CLIENT=192.168.33.2 47614 22", "SELINUX_USE_CURRENT_RANGE=", "SSH_TTY=/dev/pts/0", "USER=root", "LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.476750 python@7fa63a1d2557[13244] execve("/usr/sbin/python", ["python", "mal.py"], ["XDG_SESSION_ID=1", "HOSTNAME=33_1", "SELINUX_ROLE_REQUESTED=", "TERM=xterm", "SHELL=/bin/bash", "HISTSIZE=1000", "SSH_CLIENT=192.168.33.2 47614 22", "SELINUX_USE_CURRENT_RANGE=", "SSH_TTY=/dev/pts/0", "USER=root", "LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.476786 python@7f22d9c6b26c[13244] execve("/usr/bin/python", ["python", "mal.py"], ["XDG_SESSION_ID=1", "HOSTNAME=33_1", "SELINUX_ROLE_REQUESTED=", "TERM=xterm", "SHELL=/bin/bash", "HISTSIZE=1000", "SSH_CLIENT=192.168.33.2 47614 22", "SELINUX_USE_CURRENT_RANGE=", "SSH_TTY=/dev/pts/0", "USER=root", "LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*)
+Thu Dec 28 13:36:39 2017.477222 python@7f22d9c6b26c[13244] brk(0x0) = 32178176
+Thu Dec 28 13:36:39 2017.477250 python@7f22d9c6bf5a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e73000
+Thu Dec 28 13:36:39 2017.477278 python@7f22d9c6be57[13244] access(0x7f22d9c71390, R_OK) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.477297 python@7f22d9c6bdf7[13244] open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+Thu Dec 28 13:36:39 2017.477454 python@7f22d9c6bd84[13244] fstat(3, 0x7fff7fcd1a20) = 0
+Thu Dec 28 13:36:39 2017.477481 python@7f22d9c6bf5a[13244] mmap2(0x0, 77394, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f22d9e60000
+Thu Dec 28 13:36:39 2017.477499 python@7f22d9c6bf07[13244] close(3) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.477526 python@7f22d9c6bdf7[13244] open("/lib64/libpython2.7.so.1.0", O_RDONLY|O_CLOEXEC) = 3
+Thu Dec 28 13:36:39 2017.477595 python@7f22d9c6be17[13244] read(3, 0x7fff7fcd1be0, 832) = 832
+Thu Dec 28 13:36:39 2017.477604 python@7f22d9c6bd84[13244] fstat(3, 0x7fff7fcd1a80) = 0
+Thu Dec 28 13:36:39 2017.477612 python@7f22d9c6bf5a[13244] mmap2(0x0, 3978824, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f22d9887000
+Thu Dec 28 13:36:39 2017.477620 python@7f22d9c6bff7[13244] mprotect(0x7f22d9a04000, 2097152, PROT_NONE) = 0
+Thu Dec 28 13:36:39 2017.477629 python@7f22d9c6bf5a[13244] mmap2(0x7f22d9c04000, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 1560576) = 0x7f22d9c04000
+Thu Dec 28 13:36:39 2017.477643 python@7f22d9c6bf5a[13244] mmap2(0x7f22d9c44000, 58952, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f22d9c44000
+Thu Dec 28 13:36:39 2017.477655 python@7f22d9c6bf07[13244] close(3) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.477667 python@7f22d9c6bdf7[13244] open("/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+Thu Dec 28 13:36:39 2017.477734 python@7f22d9c6be17[13244] read(3, 0x7fff7fcd1bb0, 832) = 832
+Thu Dec 28 13:36:39 2017.477761 python@7f22d9c6bd84[13244] fstat(3, 0x7fff7fcd1a50) = 0
+Thu Dec 28 13:36:39 2017.477769 python@7f22d9c6bf5a[13244] mmap2(0x0, 2208904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f22d966b000
+Thu Dec 28 13:36:39 2017.477778 python@7f22d9c6bff7[13244] mprotect(0x7f22d9682000, 2093056, PROT_NONE) = 0
+Thu Dec 28 13:36:39 2017.477788 python@7f22d9c6bf5a[13244] mmap2(0x7f22d9881000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 90112) = 0x7f22d9881000
+Thu Dec 28 13:36:39 2017.477802 python@7f22d9c6bf5a[13244] mmap2(0x7f22d9883000, 13448, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f22d9883000
+Thu Dec 28 13:36:39 2017.477813 python@7f22d9c6bf07[13244] close(3) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.477848 python@7f22d9c6bdf7[13244] open("/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+Thu Dec 28 13:36:39 2017.477913 python@7f22d9c6be17[13244] read(3, 0x7fff7fcd1b80, 832) = 832
+Thu Dec 28 13:36:39 2017.477920 python@7f22d9c6bd84[13244] fstat(3, 0x7fff7fcd1a20) = 0
+Thu Dec 28 13:36:39 2017.477927 python@7f22d9c6bf5a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e5f000
+Thu Dec 28 13:36:39 2017.477938 python@7f22d9c6bf5a[13244] mmap2(0x0, 2109744, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f22d9467000
+Thu Dec 28 13:36:39 2017.477947 python@7f22d9c6bff7[13244] mprotect(0x7f22d9469000, 2097152, PROT_NONE) = 0
+Thu Dec 28 13:36:39 2017.477957 python@7f22d9c6bf5a[13244] mmap2(0x7f22d9669000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 8192) = 0x7f22d9669000
+Thu Dec 28 13:36:39 2017.477971 python@7f22d9c6bf07[13244] close(3) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.477995 python@7f22d9c6bdf7[13244] open("/lib64/libutil.so.1", O_RDONLY|O_CLOEXEC) = 3
+Thu Dec 28 13:36:39 2017.478062 python@7f22d9c6be17[13244] read(3, 0x7fff7fcd1b50, 832) = 832
+Thu Dec 28 13:36:39 2017.478069 python@7f22d9c6bd84[13244] fstat(3, 0x7fff7fcd19f0) = 0
+Thu Dec 28 13:36:39 2017.478076 python@7f22d9c6bf5a[13244] mmap2(0x0, 2105616, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f22d9264000
+Thu Dec 28 13:36:39 2017.478084 python@7f22d9c6bff7[13244] mprotect(0x7f22d9266000, 2093056, PROT_NONE) = 0
+Thu Dec 28 13:36:39 2017.478092 python@7f22d9c6bf5a[13244] mmap2(0x7f22d9465000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 4096) = 0x7f22d9465000
+Thu Dec 28 13:36:39 2017.478108 python@7f22d9c6bf07[13244] close(3) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.478128 python@7f22d9c6bdf7[13244] open("/lib64/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+Thu Dec 28 13:36:39 2017.478193 python@7f22d9c6be17[13244] read(3, 0x7fff7fcd1b20, 832) = 832
+Thu Dec 28 13:36:39 2017.478199 python@7f22d9c6bd84[13244] fstat(3, 0x7fff7fcd19c0) = 0
+Thu Dec 28 13:36:39 2017.478216 python@7f22d9c6bf5a[13244] mmap2(0x0, 3150136, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f22d8f62000
+Thu Dec 28 13:36:39 2017.478226 python@7f22d9c6bff7[13244] mprotect(0x7f22d9063000, 2093056, PROT_NONE) = 0
+Thu Dec 28 13:36:39 2017.478234 python@7f22d9c6bf5a[13244] mmap2(0x7f22d9262000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 1048576) = 0x7f22d9262000
+Thu Dec 28 13:36:39 2017.478250 python@7f22d9c6bf07[13244] close(3) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.478283 python@7f22d9c6bdf7[13244] open("/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+Thu Dec 28 13:36:39 2017.478368 python@7f22d9c6be17[13244] read(3, 0x7fff7fcd1af0, 832) = 832
+Thu Dec 28 13:36:39 2017.478375 python@7f22d9c6bd84[13244] fstat(3, 0x7fff7fcd1990) = 0
+Thu Dec 28 13:36:39 2017.478382 python@7f22d9c6bf5a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e5e000
+Thu Dec 28 13:36:39 2017.478393 python@7f22d9c6bf5a[13244] mmap2(0x0, 3940800, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f22d8b9f000
+Thu Dec 28 13:36:39 2017.478422 python@7f22d9c6bff7[13244] mprotect(0x7f22d8d57000, 2097152, PROT_NONE) = 0
+Thu Dec 28 13:36:39 2017.478432 python@7f22d9c6bf5a[13244] mmap2(0x7f22d8f57000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 1802240) = 0x7f22d8f57000
+Thu Dec 28 13:36:39 2017.478454 python@7f22d9c6bf5a[13244] mmap2(0x7f22d8f5d000, 16832, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f22d8f5d000
+Thu Dec 28 13:36:39 2017.478475 python@7f22d9c6bf07[13244] close(3) = 0
+Thu Dec 28 13:36:39 2017.478518 python@7f22d9c6bf5a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e5d000
+Thu Dec 28 13:36:39 2017.478526 python@7f22d9c6bf5a[13244] mmap2(0x0, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e5b000
+Thu Dec 28 13:36:39 2017.478546 python@7f22d9c53f1d[13244] arch_prctl(ARCH_SET_FS, 139787661326144) = 0
+Thu Dec 28 13:36:39 2017.478623 python@7f22d9c6bff7[13244] mprotect(0x7f22d8f57000, 16384, PROT_READ) = 0
+Thu Dec 28 13:36:39 2017.478650 python@7f22d9c6bff7[13244] mprotect(0x7f22d9262000, 4096, PROT_READ) = 0
+Thu Dec 28 13:36:39 2017.478661 python@7f22d9c6bff7[13244] mprotect(0x7f22d9465000, 4096, PROT_READ) = 0
+Thu Dec 28 13:36:39 2017.478674 python@7f22d9c6bff7[13244] mprotect(0x7f22d9669000, 4096, PROT_READ) = 0
+Thu Dec 28 13:36:39 2017.478690 python@7f22d9c6bff7[13244] mprotect(0x7f22d9881000, 4096, PROT_READ) = 0
+Thu Dec 28 13:36:39 2017.478899 python@7f22d9c6bff7[13244] mprotect(0x7f22d9c04000, 8192, PROT_READ) = 0
+Thu Dec 28 13:36:39 2017.478908 python@7f22d9c6bff7[13244] mprotect(0x600000, 4096, PROT_READ) = 0
+Thu Dec 28 13:36:39 2017.478918 python@7f22d9c6bff7[13244] mprotect(0x7f22d9e74000, 4096, PROT_READ) = 0
+Thu Dec 28 13:36:39 2017.478928 python@7f22d9c6bfd7[13244] munmap(0x7f22d9e60000, 77394) = 0
+Thu Dec 28 13:36:39 2017.478943 python@7f22d9671947[13244] set_tid_address(0x7f22d9e5ba10) = 13244
+Thu Dec 28 13:36:39 2017.478949 python@7f22d96719b1[13244] set_robust_list(0x7f22d9e5ba20, 24) = 0
+Thu Dec 28 13:36:39 2017.478961 python@7f22d967a6ed[13244] rt_sigaction(0x20, {0x7f22d96717e0, SA_SIGINFO|SA_RESTORER, 0x7f22d967a5e0, [EMPTY]}, 0x0, 8) = 0
+Thu Dec 28 13:36:39 2017.478969 python@7f22d967a6ed[13244] rt_sigaction(0x21, {0x7f22d9671870, SA_RESTART|SA_SIGINFO|SA_RESTORER, 0x7f22d967a5e0, [EMPTY]}, 0x0, 8) = 0
+Thu Dec 28 13:36:39 2017.478976 python@7f22d9671a94[13244] rt_sigprocmask(SIG_UNBLOCK, [EMPTY], 0x0, 8) = 0
+Thu Dec 28 13:36:39 2017.478990 python@7f22d8c8db27[13244] getrlimit(RLIMIT_STACK, 0x7fff7fcd3290) = 0
+Thu Dec 28 13:36:39 2017.479046 python@7f22d8c8d869[13244] ioctl(0, 21505, 0x7fff7fcd3140) = 0
+Thu Dec 28 13:36:39 2017.479093 python@7f22d8c8dfec[13244] brk(0x0) = 32178176
+Thu Dec 28 13:36:39 2017.479098 python@7f22d8c8dfec[13244] brk(0x1ed1000) = 32313344
+Thu Dec 28 13:36:39 2017.479103 python@7f22d8c8dfec[13244] brk(0x0) = 32313344
+Thu Dec 28 13:36:39 2017.479139 python@7f22d8c9199a[13244] mmap2(0x0, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e1a000
+Thu Dec 28 13:36:39 2017.481093 python@7f22d8c8dfec[13244] brk(0x0) = 32313344
+Thu Dec 28 13:36:39 2017.481101 python@7f22d8c8dfec[13244] brk(0x1ef2000) = 32448512
+Thu Dec 28 13:36:39 2017.481168 python@7f22d8c88154[13244] fstat(0, 0x7fff7fcd30b0) = 0
+Thu Dec 28 13:36:39 2017.481181 python@7f22d8c88154[13244] fstat(0, 0x7fff7fcd2fb0) = 0
+Thu Dec 28 13:36:39 2017.481186 python@7f22d8c88154[13244] fstat(1, 0x7fff7fcd2fb0) = 0
+Thu Dec 28 13:36:39 2017.481190 python@7f22d8c88154[13244] fstat(2, 0x7fff7fcd2fb0) = 0
+Thu Dec 28 13:36:39 2017.481230 python@7f22d8c88105[13244] stat("/usr/local/sbin/python", 0x7fff7fccffa0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.481239 python@7f22d8c88105[13244] stat("/usr/local/bin/python", 0x7fff7fccffa0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.481245 python@7f22d8c88105[13244] stat("/usr/sbin/python", 0x7fff7fccffa0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.481251 python@7f22d8c88105[13244] stat("/usr/bin/python", 0x7fff7fccffa0) = 0
+Thu Dec 28 13:36:39 2017.481265 python@7f22d8c89f17[13244] readlink("/usr/bin/python", 0x7fff7fcd2050, 4096) = 7
+Thu Dec 28 13:36:39 2017.481273 python@7f22d8c89f17[13244] readlink("/usr/bin/python2", 0x7fff7fcd2050, 4096) = 9
+Thu Dec 28 13:36:39 2017.481280 python@7f22d8c89f17[13244] readlink("/usr/bin/python2.7", 0x7fff7fcd2050, 4096) = -22 (EINVAL)
+Thu Dec 28 13:36:39 2017.481290 python@7f22d8c88105[13244] stat("/usr/bin/Modules/Setup", 0x7fff7fccfee0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.481298 python@7f22d8c88105[13244] stat("/usr/bin/lib64/python2.7/os.py", 0x7fff7fccfed0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.481304 python@7f22d8c88105[13244] stat("/usr/bin/lib64/python2.7/os.pyc", 0x7fff7fccfed0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.481310 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/os.py", 0x7fff7fccfed0) = 0
+Thu Dec 28 13:36:39 2017.481327 python@7f22d8c88105[13244] stat("/usr/bin/pybuilddir.txt", 0x7fff7fccfee0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.481333 python@7f22d8c88105[13244] stat("/usr/bin/lib64/python2.7/lib-dynload", 0x7fff7fccfee0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.481339 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-dynload", 0x7fff7fccfee0) = 0
+Thu Dec 28 13:36:39 2017.481661 python@7f22d8c9199a[13244] mmap2(0x0, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9dd9000
+Thu Dec 28 13:36:39 2017.481719 python@7f22d967a6ed[13244] rt_sigaction(SIGPIPE, {SIG_IGN}, 0x7fff7fcd2f80, 8) = 0
+Thu Dec 28 13:36:39 2017.481726 python@7f22d967a6ed[13244] rt_sigaction(SIGXFSZ, {SIG_IGN}, 0x7fff7fcd2f80, 8) = 0
+Thu Dec 28 13:36:39 2017.481743 python@7f22d967a6ed[13244] rt_sigaction(SIGHUP, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481748 python@7f22d967a6ed[13244] rt_sigaction(SIGINT, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481753 python@7f22d967a6ed[13244] rt_sigaction(SIGQUIT, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481757 python@7f22d967a6ed[13244] rt_sigaction(SIGILL, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481761 python@7f22d967a6ed[13244] rt_sigaction(SIGTRAP, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481766 python@7f22d967a6ed[13244] rt_sigaction(SIGABRT, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481770 python@7f22d967a6ed[13244] rt_sigaction(SIGBUS, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481774 python@7f22d967a6ed[13244] rt_sigaction(SIGFPE, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481778 python@7f22d967a6ed[13244] rt_sigaction(SIGKILL, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481782 python@7f22d967a6ed[13244] rt_sigaction(SIGUSR1, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481786 python@7f22d967a6ed[13244] rt_sigaction(SIGSEGV, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481790 python@7f22d967a6ed[13244] rt_sigaction(SIGUSR2, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481794 python@7f22d967a6ed[13244] rt_sigaction(SIGPIPE, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481798 python@7f22d967a6ed[13244] rt_sigaction(SIGALRM, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481802 python@7f22d967a6ed[13244] rt_sigaction(SIGTERM, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481807 python@7f22d967a6ed[13244] rt_sigaction(0x10, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481811 python@7f22d967a6ed[13244] rt_sigaction(SIGCHLD, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481815 python@7f22d967a6ed[13244] rt_sigaction(SIGCONT, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481820 python@7f22d967a6ed[13244] rt_sigaction(SIGSTOP, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481824 python@7f22d967a6ed[13244] rt_sigaction(SIGTSTP, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481828 python@7f22d967a6ed[13244] rt_sigaction(SIGTTIN, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481832 python@7f22d967a6ed[13244] rt_sigaction(SIGTTOU, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481836 python@7f22d967a6ed[13244] rt_sigaction(SIGURG, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481840 python@7f22d967a6ed[13244] rt_sigaction(SIGXCPU, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481844 python@7f22d967a6ed[13244] rt_sigaction(SIGXFSZ, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481848 python@7f22d967a6ed[13244] rt_sigaction(SIGVTALRM, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481853 python@7f22d967a6ed[13244] rt_sigaction(SIGPROF, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481857 python@7f22d967a6ed[13244] rt_sigaction(SIGWINCH, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481862 python@7f22d967a6ed[13244] rt_sigaction(SIGIO/SIGPOLL, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481866 python@7f22d967a6ed[13244] rt_sigaction(SIGPWR, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481870 python@7f22d967a6ed[13244] rt_sigaction(SIGSYS, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481875 python@7f22d967a6ed[13244] rt_sigaction(0x22, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481879 python@7f22d967a6ed[13244] rt_sigaction(0x23, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481883 python@7f22d967a6ed[13244] rt_sigaction(0x24, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481887 python@7f22d967a6ed[13244] rt_sigaction(0x25, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481892 python@7f22d967a6ed[13244] rt_sigaction(0x26, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481896 python@7f22d967a6ed[13244] rt_sigaction(0x27, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481900 python@7f22d967a6ed[13244] rt_sigaction(0x28, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481904 python@7f22d967a6ed[13244] rt_sigaction(0x29, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481908 python@7f22d967a6ed[13244] rt_sigaction(0x2a, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481912 python@7f22d967a6ed[13244] rt_sigaction(0x2b, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481916 python@7f22d967a6ed[13244] rt_sigaction(0x2c, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481919 python@7f22d967a6ed[13244] rt_sigaction(0x2d, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481924 python@7f22d967a6ed[13244] rt_sigaction(0x2e, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481928 python@7f22d967a6ed[13244] rt_sigaction(0x2f, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481932 python@7f22d967a6ed[13244] rt_sigaction(0x30, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481935 python@7f22d967a6ed[13244] rt_sigaction(0x31, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481939 python@7f22d967a6ed[13244] rt_sigaction(0x32, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481943 python@7f22d967a6ed[13244] rt_sigaction(0x33, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481947 python@7f22d967a6ed[13244] rt_sigaction(0x34, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481951 python@7f22d967a6ed[13244] rt_sigaction(0x35, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481955 python@7f22d967a6ed[13244] rt_sigaction(0x36, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481959 python@7f22d967a6ed[13244] rt_sigaction(0x37, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481963 python@7f22d967a6ed[13244] rt_sigaction(0x38, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481967 python@7f22d967a6ed[13244] rt_sigaction(0x39, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481971 python@7f22d967a6ed[13244] rt_sigaction(0x3a, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481975 python@7f22d967a6ed[13244] rt_sigaction(0x3b, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481979 python@7f22d967a6ed[13244] rt_sigaction(0x3c, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481983 python@7f22d967a6ed[13244] rt_sigaction(0x3d, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481987 python@7f22d967a6ed[13244] rt_sigaction(0x3e, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481991 python@7f22d967a6ed[13244] rt_sigaction(0x3f, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.481995 python@7f22d967a6ed[13244] rt_sigaction(0x40, {NULL}, 0x7fff7fcd3000, 8) = 0
+Thu Dec 28 13:36:39 2017.482001 python@7f22d967a6ed[13244] rt_sigaction(SIGINT, {0x7f22d999d540, SA_RESTORER, 0x7f22d967a5e0, [EMPTY]}, 0x7fff7fcd2f50, 8) = 0
+Thu Dec 28 13:36:39 2017.482072 python@7f22d8c8dfec[13244] brk(0x0) = 32448512
+Thu Dec 28 13:36:39 2017.482078 python@7f22d8c8dfec[13244] brk(0x1f13000) = 32583680
+Thu Dec 28 13:36:39 2017.482097 python@7f22d8c88105[13244] stat("/usr/lib64/python27.zip", 0x7fff7fcce9d0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.482104 python@7f22d8c88105[13244] stat("/usr/lib64", 0x7fff7fcce9d0) = 0
+Thu Dec 28 13:36:39 2017.482119 python@7f22d8c88105[13244] stat("/usr/lib64/python27.zip", 0x7fff7fcd1a20) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.482127 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/", 0x7fff7fcce9d0) = 0
+Thu Dec 28 13:36:39 2017.482134 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/", 0x7fff7fcd1a20) = 0
+Thu Dec 28 13:36:39 2017.482140 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site", 0x7fff7fcd1be0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.482153 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.482251 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sitemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.482339 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site.py", O_RDONLY) = 3
+Thu Dec 28 13:36:39 2017.482411 python@7f22d8c88154[13244] fstat(3, 0x7fff7fcd2d50) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.482441 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site.pyc", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.482503 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd2ba0) = 0
+Thu Dec 28 13:36:39 2017.482510 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.482519 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.482540 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd2c40) = 0
+Thu Dec 28 13:36:39 2017.482549 python@7f22d8c887e0[13244] read(5, 0x1ef4178, 12288) = 12288
+Thu Dec 28 13:36:39 2017.482559 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 3184
+Thu Dec 28 13:36:39 2017.482574 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.482778 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.482787 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.482828 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/os", 0x7fff7fcd1660) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.482838 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/os.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.482931 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/osmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.482994 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/os.py", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.483057 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd27d0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.483065 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/os.pyc", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.483118 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd2620) = 0
+Thu Dec 28 13:36:39 2017.483135 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.483144 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.483153 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd26c0) = 0
+Thu Dec 28 13:36:39 2017.483162 python@7f22d8c887e0[13244] read(6, 0x1efb358, 20480) = 20480
+Thu Dec 28 13:36:39 2017.483191 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 981
+Thu Dec 28 13:36:39 2017.483216 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.483357 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.483366 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.483555 python@7f22d8c885a0[13244] open(0x7f22d8d1e51d, O_RDONLY|O_CLOEXEC) = 6
+Thu Dec 28 13:36:39 2017.483651 python@7f22d8c88154[13244] fstat(6, 0x7fff7fccffc0) = 0
+Thu Dec 28 13:36:39 2017.483658 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.483667 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 1024) = 1024
+Thu Dec 28 13:36:39 2017.483709 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.483715 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.483841 python@7f22d8c8dfec[13244] brk(0x0) = 32583680
+Thu Dec 28 13:36:39 2017.483847 python@7f22d8c8dfec[13244] brk(0x1f35000) = 32722944
+Thu Dec 28 13:36:39 2017.483932 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/posixpath", 0x7fff7fcd10e0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.483944 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/posixpath.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.484024 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/posixpathmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.484089 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/posixpath.py", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.484168 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd2250) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.484176 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/posixpath.pyc", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.484233 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd20a0) = 0
+Thu Dec 28 13:36:39 2017.484240 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.484248 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.484261 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd2140) = 0
+Thu Dec 28 13:36:39 2017.484283 python@7f22d8c887e0[13244] read(7, 0x1f19cc8, 4096) = 4096
+Thu Dec 28 13:36:39 2017.484291 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 3105
+Thu Dec 28 13:36:39 2017.484296 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.484399 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.484409 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.484438 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/stat", 0x7fff7fcd0b60) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.484449 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/stat.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.484529 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/statmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.484581 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/stat.py", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.484628 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd1cd0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.484635 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/stat.pyc", O_RDONLY) = 8
+Thu Dec 28 13:36:39 2017.484684 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1b20) = 0
+Thu Dec 28 13:36:39 2017.484691 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.484699 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 2751
+Thu Dec 28 13:36:39 2017.484733 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1bc0) = 0
+Thu Dec 28 13:36:39 2017.484741 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.484784 python@7f22d8c9199a[13244] mmap2(0x0, 200704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9da8000
+Thu Dec 28 13:36:39 2017.484998 python@7f22d8c88e90[13244] close(8) = 0
+Thu Dec 28 13:36:39 2017.485007 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.485030 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.485045 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/genericpath", 0x7fff7fcd0b60) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485055 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/genericpath.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485125 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/genericpathmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485177 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/genericpath.py", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.485224 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd1cd0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485252 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/genericpath.pyc", O_RDONLY) = 8
+Thu Dec 28 13:36:39 2017.485301 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1b20) = 0
+Thu Dec 28 13:36:39 2017.485308 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.485325 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 3263
+Thu Dec 28 13:36:39 2017.485349 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1bc0) = 0
+Thu Dec 28 13:36:39 2017.485365 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.485406 python@7f22d8c88e90[13244] close(8) = 0
+Thu Dec 28 13:36:39 2017.485413 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.485440 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.485453 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/warnings", 0x7fff7fcd0b60) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485463 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/warnings.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485542 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/warningsmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485593 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/warnings.py", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.485640 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd1cd0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485647 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/warnings.pyc", O_RDONLY) = 8
+Thu Dec 28 13:36:39 2017.485702 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1b20) = 0
+Thu Dec 28 13:36:39 2017.485709 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.485717 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.485729 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1bc0) = 0
+Thu Dec 28 13:36:39 2017.485734 python@7f22d8c887e0[13244] read(8, 0x1ed32e8, 8192) = 8192
+Thu Dec 28 13:36:39 2017.485740 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 862
+Thu Dec 28 13:36:39 2017.485745 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.485830 python@7f22d8c88e90[13244] close(8) = 0
+Thu Dec 28 13:36:39 2017.485838 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.485864 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/linecache", 0x7fff7fcd05e0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485874 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/linecache.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.485951 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/linecachemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.486001 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/linecache.py", O_RDONLY) = 8
+Thu Dec 28 13:36:39 2017.486047 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1750) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.486054 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/linecache.pyc", O_RDONLY) = 9
+Thu Dec 28 13:36:39 2017.486103 python@7f22d8c88154[13244] fstat(9, 0x7fff7fcd15a0) = 0
+Thu Dec 28 13:36:39 2017.486120 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.486136 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 3211
+Thu Dec 28 13:36:39 2017.486150 python@7f22d8c88154[13244] fstat(9, 0x7fff7fcd1640) = 0
+Thu Dec 28 13:36:39 2017.486156 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.486182 python@7f22d8c88e90[13244] close(9) = 0
+Thu Dec 28 13:36:39 2017.486209 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.486256 python@7f22d8c88e90[13244] close(8) = 0
+Thu Dec 28 13:36:39 2017.486270 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/types", 0x7fff7fcd05e0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.486279 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/types.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.486370 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/typesmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.486445 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/types.py", O_RDONLY) = 8
+Thu Dec 28 13:36:39 2017.486494 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1750) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.486502 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/types.pyc", O_RDONLY) = 9
+Thu Dec 28 13:36:39 2017.486579 python@7f22d8c88154[13244] fstat(9, 0x7fff7fcd15a0) = 0
+Thu Dec 28 13:36:39 2017.486606 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.486614 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 2506
+Thu Dec 28 13:36:39 2017.486636 python@7f22d8c88154[13244] fstat(9, 0x7fff7fcd1640) = 0
+Thu Dec 28 13:36:39 2017.486642 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.486669 python@7f22d8c88e90[13244] close(9) = 0
+Thu Dec 28 13:36:39 2017.486676 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.486737 python@7f22d8c88e90[13244] close(8) = 0
+Thu Dec 28 13:36:39 2017.486936 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.486960 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.487072 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/UserDict", 0x7fff7fcd10e0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.487084 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/UserDict.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.487158 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/UserDictmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.487230 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/UserDict.py", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.487288 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd2250) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.487296 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/UserDict.pyc", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.487366 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd20a0) = 0
+Thu Dec 28 13:36:39 2017.487379 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.487406 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.487420 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd2140) = 0
+Thu Dec 28 13:36:39 2017.487425 python@7f22d8c887e0[13244] read(7, 0x1f18cb8, 4096) = 4096
+Thu Dec 28 13:36:39 2017.487430 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 628
+Thu Dec 28 13:36:39 2017.487445 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.487537 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.487545 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.487584 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/_abcoll", 0x7fff7fcd0b60) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.487594 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_abcoll.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.487673 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_abcollmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.487734 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_abcoll.py", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.487791 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd1cd0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.487798 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_abcoll.pyc", O_RDONLY) = 8
+Thu Dec 28 13:36:39 2017.487859 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1b20) = 0
+Thu Dec 28 13:36:39 2017.487866 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.487884 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.487898 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1bc0) = 0
+Thu Dec 28 13:36:39 2017.487908 python@7f22d8c887e0[13244] read(8, 0x1f1fdc8, 20480) = 20480
+Thu Dec 28 13:36:39 2017.487928 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 406
+Thu Dec 28 13:36:39 2017.487932 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.487994 python@7f22d8c9199a[13244] mmap2(0x0, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9d67000
+Thu Dec 28 13:36:39 2017.488099 python@7f22d8c88e90[13244] close(8) = 0
+Thu Dec 28 13:36:39 2017.488107 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.488133 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/abc", 0x7fff7fcd05e0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.488143 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/abc.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.488221 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/abcmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.488272 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/abc.py", O_RDONLY) = 8
+Thu Dec 28 13:36:39 2017.488353 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1750) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.488382 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/abc.pyc", O_RDONLY) = 9
+Thu Dec 28 13:36:39 2017.488431 python@7f22d8c88154[13244] fstat(9, 0x7fff7fcd15a0) = 0
+Thu Dec 28 13:36:39 2017.488448 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.488475 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.488490 python@7f22d8c88154[13244] fstat(9, 0x7fff7fcd1640) = 0
+Thu Dec 28 13:36:39 2017.488516 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 2047
+Thu Dec 28 13:36:39 2017.488521 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.488556 python@7f22d8c88e90[13244] close(9) = 0
+Thu Dec 28 13:36:39 2017.488564 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.488591 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/_weakrefset", 0x7fff7fcd0060) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.488601 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_weakrefset.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.488678 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_weakrefsetmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.488728 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_weakrefset.py", O_RDONLY) = 9
+Thu Dec 28 13:36:39 2017.488778 python@7f22d8c88154[13244] fstat(9, 0x7fff7fcd11d0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.488786 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_weakrefset.pyc", O_RDONLY) = 10
+Thu Dec 28 13:36:39 2017.488856 python@7f22d8c88154[13244] fstat(10, 0x7fff7fcd1020) = 0
+Thu Dec 28 13:36:39 2017.488862 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.488870 python@7f22d8c887e0[13244] read(10, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.488898 python@7f22d8c88154[13244] fstat(10, 0x7fff7fcd10c0) = 0
+Thu Dec 28 13:36:39 2017.488906 python@7f22d8c887e0[13244] read(10, 0x1f23c08, 4096) = 4096
+Thu Dec 28 13:36:39 2017.488912 python@7f22d8c887e0[13244] read(10, 0x7f22d9e72000, 4096) = 1285
+Thu Dec 28 13:36:39 2017.488927 python@7f22d8c887e0[13244] read(10, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.489001 python@7f22d8c88e90[13244] close(10) = 0
+Thu Dec 28 13:36:39 2017.489009 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.489094 python@7f22d8c88e90[13244] close(9) = 0
+Thu Dec 28 13:36:39 2017.489210 python@7f22d8c88e90[13244] close(8) = 0
+Thu Dec 28 13:36:39 2017.490062 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.490103 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.490214 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/copy_reg", 0x7fff7fcd10e0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.490226 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/copy_reg.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.490303 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/copy_regmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.490389 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/copy_reg.py", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.490464 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd2250) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.490473 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/copy_reg.pyc", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.490521 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd20a0) = 0
+Thu Dec 28 13:36:39 2017.490529 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.490547 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.490567 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd2140) = 0
+Thu Dec 28 13:36:39 2017.490572 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 1017
+Thu Dec 28 13:36:39 2017.490579 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.490617 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.490625 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.490660 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.490677 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.490691 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/traceback", 0x7fff7fcd1660) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.490700 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/traceback.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.490780 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/tracebackmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.490842 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/traceback.py", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.490903 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd27d0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.490921 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/traceback.pyc", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.490978 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd2620) = 0
+Thu Dec 28 13:36:39 2017.490985 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.490993 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.491003 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd26c0) = 0
+Thu Dec 28 13:36:39 2017.491008 python@7f22d8c887e0[13244] read(6, 0x1ef3f38, 4096) = 4096
+Thu Dec 28 13:36:39 2017.491013 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 3431
+Thu Dec 28 13:36:39 2017.491018 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.491076 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.491084 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.491115 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.491310 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7", 0x7fff7fcce2e0) = 0
+Thu Dec 28 13:36:39 2017.491332 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7", 0x7fff7fcd1330) = 0
+Thu Dec 28 13:36:39 2017.491339 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/sysconfig", 0x7fff7fcd14f0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.491347 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sysconfig.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.491431 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sysconfigmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.491484 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sysconfig.py", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.491535 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd2660) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.491563 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sysconfig.pyc", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.491610 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd24b0) = 0
+Thu Dec 28 13:36:39 2017.491617 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.491626 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.491635 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd2550) = 0
+Thu Dec 28 13:36:39 2017.491640 python@7f22d8c8dfec[13244] brk(0x0) = 32722944
+Thu Dec 28 13:36:39 2017.491644 python@7f22d8c8dfec[13244] brk(0x1f57000) = 32862208
+Thu Dec 28 13:36:39 2017.491653 python@7f22d8c887e0[13244] read(6, 0x1f338a8, 12288) = 12288
+Thu Dec 28 13:36:39 2017.491662 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 1261
+Thu Dec 28 13:36:39 2017.491668 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.491765 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.491773 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.491841 python@7f22d8c881a5[13244] lstat("/usr", 0x7fff7fcd1d30) = 0
+Thu Dec 28 13:36:39 2017.491863 python@7f22d8c881a5[13244] lstat("/usr/bin", 0x7fff7fcd1d30) = 0
+Thu Dec 28 13:36:39 2017.491874 python@7f22d8c881a5[13244] lstat("/usr/bin/python", 0x7fff7fcd1d30) = 0
+Thu Dec 28 13:36:39 2017.491886 python@7f22d8c89f17[13244] readlink("/usr/bin/python", 0x7fff7fcd0f30, 4096) = 7
+Thu Dec 28 13:36:39 2017.491899 python@7f22d8c881a5[13244] lstat("/usr/bin/python2", 0x7fff7fcd1bc0) = 0
+Thu Dec 28 13:36:39 2017.491908 python@7f22d8c89f17[13244] readlink("/usr/bin/python2", 0x7fff7fcd0dc0, 4096) = 9
+Thu Dec 28 13:36:39 2017.491919 python@7f22d8c881a5[13244] lstat("/usr/bin/python2.7", 0x7fff7fcd1a50) = 0
+Thu Dec 28 13:36:39 2017.491952 python@7f22d8c88105[13244] stat("/usr/bin/Modules/Setup.dist", 0x7fff7fcd2010) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.491980 python@7f22d8c88105[13244] stat("/usr/bin/Modules/Setup.local", 0x7fff7fcd2010) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.492000 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.492016 python@7f22d8c88105[13244] stat("/usr/bin/Modules/Setup.dist", 0x7fff7fcd2590) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.492031 python@7f22d8c88105[13244] stat("/usr/bin/Modules/Setup.local", 0x7fff7fcd2590) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.492044 python@7f22d8c5f097[13244] geteuid() = 0
+Thu Dec 28 13:36:39 2017.492051 python@7f22d8c5f087[13244] getuid() = 0
+Thu Dec 28 13:36:39 2017.492057 python@7f22d8c5f0b7[13244] getegid() = 0
+Thu Dec 28 13:36:39 2017.492062 python@7f22d8c5f0a7[13244] getgid() = 0
+Thu Dec 28 13:36:39 2017.492081 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/re", 0x7fff7fcd0d20) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.492090 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/re.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.492177 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/remodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.492231 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/re.py", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.492282 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd1e90) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.492289 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/re.pyc", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.492350 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd1ce0) = 0
+Thu Dec 28 13:36:39 2017.492357 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.492366 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.492375 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd1d80) = 0
+Thu Dec 28 13:36:39 2017.492386 python@7f22d8c887e0[13244] read(6, 0x1f38188, 8192) = 8192
+Thu Dec 28 13:36:39 2017.492393 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 806
+Thu Dec 28 13:36:39 2017.492397 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.492453 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.492461 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.492489 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/sre_compile", 0x7fff7fcd07a0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.492499 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_compile.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.492568 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_compilemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.492638 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_compile.py", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.492698 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd1910) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.492715 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_compile.pyc", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.492762 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd1760) = 0
+Thu Dec 28 13:36:39 2017.492769 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.492787 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.492796 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd1800) = 0
+Thu Dec 28 13:36:39 2017.492804 python@7f22d8c887e0[13244] read(7, 0x1f3d188, 4096) = 4096
+Thu Dec 28 13:36:39 2017.492829 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 2824
+Thu Dec 28 13:36:39 2017.492834 python@7f22d8c887e0[13244] read(7, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.492897 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.492905 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.492973 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/sre_parse", 0x7fff7fcd0220) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.492983 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_parse.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.493061 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_parsemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.493133 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_parse.py", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.493183 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd1390) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.493191 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_parse.pyc", O_RDONLY) = 8
+Thu Dec 28 13:36:39 2017.493237 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd11e0) = 0
+Thu Dec 28 13:36:39 2017.493243 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.493272 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.493281 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd1280) = 0
+Thu Dec 28 13:36:39 2017.493299 python@7f22d8c887e0[13244] read(8, 0x1f43c38, 12288) = 12288
+Thu Dec 28 13:36:39 2017.493309 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 3054
+Thu Dec 28 13:36:39 2017.493334 python@7f22d8c887e0[13244] read(8, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.493445 python@7f22d8c88e90[13244] close(8) = 0
+Thu Dec 28 13:36:39 2017.493453 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.493486 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/sre_constants", 0x7fff7fccfca0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.493496 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_constants.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.493574 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_constantsmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.493628 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_constants.py", O_RDONLY) = 8
+Thu Dec 28 13:36:39 2017.493676 python@7f22d8c88154[13244] fstat(8, 0x7fff7fcd0e10) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.493713 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sre_constants.pyc", O_RDONLY) = 9
+Thu Dec 28 13:36:39 2017.493759 python@7f22d8c88154[13244] fstat(9, 0x7fff7fcd0c60) = 0
+Thu Dec 28 13:36:39 2017.493766 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.493784 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.493793 python@7f22d8c88154[13244] fstat(9, 0x7fff7fcd0d00) = 0
+Thu Dec 28 13:36:39 2017.493800 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 2021
+Thu Dec 28 13:36:39 2017.493804 python@7f22d8c887e0[13244] read(9, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.493855 python@7f22d8c88e90[13244] close(9) = 0
+Thu Dec 28 13:36:39 2017.493863 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.493942 python@7f22d8c88e90[13244] close(8) = 0
+Thu Dec 28 13:36:39 2017.494000 python@7f22d8c9199a[13244] mmap2(0x0, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9d26000
+Thu Dec 28 13:36:39 2017.494033 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.494075 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.494144 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.494163 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/_sysconfigdata", 0x7fff7fcd0bb0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.494173 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_sysconfigdata.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.494258 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_sysconfigdatamodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.494326 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_sysconfigdata.py", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.494388 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd1d20) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.494407 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/_sysconfigdata.pyc", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.494464 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd1b70) = 0
+Thu Dec 28 13:36:39 2017.494471 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.494479 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.494489 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd1c10) = 0
+Thu Dec 28 13:36:39 2017.494494 python@7f22d8c8dfec[13244] brk(0x0) = 32862208
+Thu Dec 28 13:36:39 2017.494498 python@7f22d8c8dfec[13244] brk(0x1f79000) = 33001472
+Thu Dec 28 13:36:39 2017.494507 python@7f22d8c887e0[13244] read(6, 0x1f54468, 16384) = 16384
+Thu Dec 28 13:36:39 2017.494538 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 715
+Thu Dec 28 13:36:39 2017.494544 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.494682 python@7f22d8c8dfec[13244] brk(0x0) = 33001472
+Thu Dec 28 13:36:39 2017.494686 python@7f22d8c8dfec[13244] brk(0x0) = 33001472
+Thu Dec 28 13:36:39 2017.494689 python@7f22d8c8dfec[13244] brk(0x1f74000) = 32980992
+Thu Dec 28 13:36:39 2017.494696 python@7f22d8c8dfec[13244] brk(0x0) = 32980992
+Thu Dec 28 13:36:39 2017.494700 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.494707 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.494748 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.495128 python@7f22d8c88105[13244] stat("/root/.local/lib/python2.7/site-packages", 0x7fff7fcd2590) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.495165 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages", 0x7fff7fcd2590) = 0
+Thu Dec 28 13:36:39 2017.495197 python@7f22d8c88660[13244] openat(AT_FDCWD, "/usr/lib64/python2.7/site-packages", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 5
+Thu Dec 28 13:36:39 2017.495216 python@7f22d8c59cb5[13244] getdents(5, 0x1f654c0, 32768) = 4328
+Thu Dec 28 13:36:39 2017.495250 python@7f22d8c59cb5[13244] getdents(5, 0x1f654c0, 32768) = 0
+Thu Dec 28 13:36:39 2017.495256 python@7f22d8c88e90[13244] close(5) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.495303 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/abrt.pth", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.495389 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd2170) = 0
+Thu Dec 28 13:36:39 2017.495416 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd21a0) = 0
+Thu Dec 28 13:36:39 2017.495422 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.495431 python@7f22d8c887e0[13244] read(5, 0x1f37190, 8192) = 30
+Thu Dec 28 13:36:39 2017.495437 python@7f22d8c887e0[13244] read(5, 0x1f371ae, 4096) = 0
+Thu Dec 28 13:36:39 2017.495611 python@7f22d8c8dfec[13244] brk(0x0) = 32980992
+Thu Dec 28 13:36:39 2017.495616 python@7f22d8c8dfec[13244] brk(0x1f95000) = 33116160
+Thu Dec 28 13:36:39 2017.495711 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/abrt_exception_handler", 0x7fff7fcd0cb0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.495722 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/abrt_exception_handler.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.495800 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/abrt_exception_handlermodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.495873 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/abrt_exception_handler.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.495951 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/abrt_exception_handler.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.496000 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/plat-linux2", 0x7fff7fccdaa0) = 0
+Thu Dec 28 13:36:39 2017.496011 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/plat-linux2", 0x7fff7fcd0af0) = 0
+Thu Dec 28 13:36:39 2017.496019 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/plat-linux2/abrt_exception_handler", 0x7fff7fcd0cb0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496027 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/abrt_exception_handler.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496094 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/abrt_exception_handlermodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496145 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/abrt_exception_handler.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496191 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/abrt_exception_handler.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.496239 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-tk", 0x7fff7fccdaa0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.496246 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7", 0x7fff7fccdaa0) = 0
+Thu Dec 28 13:36:39 2017.496255 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-tk", 0x7fff7fcd0af0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.496264 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-old", 0x7fff7fccdaa0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.496270 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7", 0x7fff7fccdaa0) = 0
+Thu Dec 28 13:36:39 2017.496276 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-old", 0x7fff7fcd0af0) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.496293 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-dynload", 0x7fff7fccdaa0) = 0
+Thu Dec 28 13:36:39 2017.496300 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-dynload", 0x7fff7fcd0af0) = 0
+Thu Dec 28 13:36:39 2017.496307 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-dynload/abrt_exception_handler", 0x7fff7fcd0cb0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496317 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/abrt_exception_handler.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496404 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/abrt_exception_handlermodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496463 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/abrt_exception_handler.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496530 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/abrt_exception_handler.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.496578 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages", 0x7fff7fccdaa0) = 0
+Thu Dec 28 13:36:39 2017.496589 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages", 0x7fff7fcd0af0) = 0
+Thu Dec 28 13:36:39 2017.496596 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages/abrt_exception_handler", 0x7fff7fcd0cb0) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496603 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/abrt_exception_handler.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496657 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/abrt_exception_handlermodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496712 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/abrt_exception_handler.py", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.496759 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd1e20) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.496767 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/abrt_exception_handler.pyc", O_RDONLY) = 7
+Thu Dec 28 13:36:39 2017.496833 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd1c70) = 0
+Thu Dec 28 13:36:39 2017.496840 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e71000
+Thu Dec 28 13:36:39 2017.496849 python@7f22d8c887e0[13244] read(7, 0x7f22d9e71000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.496858 python@7f22d8c88154[13244] fstat(7, 0x7fff7fcd1d10) = 0
+Thu Dec 28 13:36:39 2017.496866 python@7f22d8c887e0[13244] read(7, 0x7f22d9e71000, 4096) = 3077
+Thu Dec 28 13:36:39 2017.496881 python@7f22d8c887e0[13244] read(7, 0x7f22d9e71000, 4096) = 0
+Thu Dec 28 13:36:39 2017.496932 python@7f22d8c88e90[13244] close(7) = 0
+Thu Dec 28 13:36:39 2017.496940 python@7f22d8c91a27[13244] munmap(0x7f22d9e71000, 4096) = 0
+Thu Dec 28 13:36:39 2017.496993 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.497007 python@7f22d8c887e0[13244] read(5, 0x1f37190, 8192) = 0
+Thu Dec 28 13:36:39 2017.497019 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.497024 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497044 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/pygtk.pth", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.497131 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd2170) = 0
+Thu Dec 28 13:36:39 2017.497143 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd21a0) = 0
+Thu Dec 28 13:36:39 2017.497149 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.497157 python@7f22d8c887e0[13244] read(5, 0x1f37190, 8192) = 8
+Thu Dec 28 13:36:39 2017.497162 python@7f22d8c887e0[13244] read(5, 0x1f37198, 4096) = 0
+Thu Dec 28 13:36:39 2017.497202 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages/gtk-2.0", 0x7fff7fcd2170) = 0
+Thu Dec 28 13:36:39 2017.497215 python@7f22d8c887e0[13244] read(5, 0x1f37190, 8192) = 0
+Thu Dec 28 13:36:39 2017.497222 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.497228 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.497241 python@7f22d8c88105[13244] stat("/usr/lib/python2.7/site-packages", 0x7fff7fcd2590) = 0
+Thu Dec 28 13:36:39 2017.497267 python@7f22d8c88660[13244] openat(AT_FDCWD, "/usr/lib/python2.7/site-packages", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 5
+Thu Dec 28 13:36:39 2017.497284 python@7f22d8c59cb5[13244] getdents(5, 0x1f7c8c0, 32768) = 3736
+Thu Dec 28 13:36:39 2017.497312 python@7f22d8c59cb5[13244] getdents(5, 0x1f7c8c0, 32768) = 0
+Thu Dec 28 13:36:39 2017.497326 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.497361 python@7f22d8c88105[13244] stat("/usr/lib/site-python", 0x7fff7fcd2590) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.497428 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/sitecustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497438 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sitecustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497520 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sitecustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497594 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sitecustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497651 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/sitecustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.497710 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/plat-linux2/sitecustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497718 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/sitecustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497766 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/sitecustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497824 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/sitecustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497870 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/sitecustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.497923 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-dynload/sitecustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497931 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/sitecustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.497979 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/sitecustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498025 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/sitecustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498104 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/sitecustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.498162 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages/sitecustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498170 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/sitecustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498216 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/sitecustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498262 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/sitecustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498324 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/sitecustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.498385 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages/gtk-2.0", 0x7fff7fcce170) = 0
+Thu Dec 28 13:36:39 2017.498396 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages/gtk-2.0", 0x7fff7fcd11c0) = 0
+Thu Dec 28 13:36:39 2017.498413 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages/gtk-2.0/sitecustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498421 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/gtk-2.0/sitecustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498473 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/gtk-2.0/sitecustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498520 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/gtk-2.0/sitecustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498582 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/gtk-2.0/sitecustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.498641 python@7f22d8c88105[13244] stat("/usr/lib/python2.7/site-packages", 0x7fff7fcce170) = 0
+Thu Dec 28 13:36:39 2017.498660 python@7f22d8c88105[13244] stat("/usr/lib/python2.7/site-packages", 0x7fff7fcd11c0) = 0
+Thu Dec 28 13:36:39 2017.498667 python@7f22d8c88105[13244] stat("/usr/lib/python2.7/site-packages/sitecustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498674 python@7f22d8c885a0[13244] open("/usr/lib/python2.7/site-packages/sitecustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498724 python@7f22d8c885a0[13244] open("/usr/lib/python2.7/site-packages/sitecustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498770 python@7f22d8c885a0[13244] open("/usr/lib/python2.7/site-packages/sitecustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498830 python@7f22d8c885a0[13244] open("/usr/lib/python2.7/site-packages/sitecustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.498893 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/usercustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498902 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/usercustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.498954 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/usercustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499010 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/usercustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499060 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/usercustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.499106 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/plat-linux2/usercustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499114 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/usercustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499160 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/usercustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499215 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/usercustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499266 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/usercustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.499318 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-dynload/usercustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499335 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/usercustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499387 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/usercustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499443 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/usercustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499516 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/usercustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.499567 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages/usercustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499575 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/usercustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499622 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/usercustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499668 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/usercustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499728 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/usercustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.499776 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/site-packages/gtk-2.0/usercustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499785 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/gtk-2.0/usercustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499842 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/gtk-2.0/usercustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499925 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/gtk-2.0/usercustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.499973 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/site-packages/gtk-2.0/usercustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.500038 python@7f22d8c88105[13244] stat("/usr/lib/python2.7/site-packages/usercustomize", 0x7fff7fcd1380) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500056 python@7f22d8c885a0[13244] open("/usr/lib/python2.7/site-packages/usercustomize.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500102 python@7f22d8c885a0[13244] open("/usr/lib/python2.7/site-packages/usercustomizemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500153 python@7f22d8c885a0[13244] open("/usr/lib/python2.7/site-packages/usercustomize.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500199 python@7f22d8c885a0[13244] open("/usr/lib/python2.7/site-packages/usercustomize.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.500260 python@7f22d8c88e90[13244] close(3) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500306 python@7f22d8c885a0[13244] open(0x7f22d8d218d0, O_RDONLY|O_CLOEXEC) = 3
+Thu Dec 28 13:36:39 2017.500382 python@7f22d8c88154[13244] fstat(3, 0x7f22d8f5cb60) = 0
+Thu Dec 28 13:36:39 2017.500390 python@7f22d8c9199a[13244] mmap2(0x0, 106070960, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f22d2676000
+Thu Dec 28 13:36:39 2017.500421 python@7f22d8bcc40d[13244] close(3) = 0
+Thu Dec 28 13:36:39 2017.500458 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings", 0x7fff7fcd1d50) = 0
+Thu Dec 28 13:36:39 2017.500466 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings/__init__.py", 0x7fff7fcd1e70) = 0
+Thu Dec 28 13:36:39 2017.500477 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings/__init__", 0x7fff7fcd1d00) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500505 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/__init__.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500589 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/__init__module.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500637 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/__init__.py", O_RDONLY) = 3
+Thu Dec 28 13:36:39 2017.500683 python@7f22d8c88154[13244] fstat(3, 0x7fff7fcd2e70) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500690 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/__init__.pyc", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.500736 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd2cc0) = 0
+Thu Dec 28 13:36:39 2017.500743 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.500751 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.500761 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd2d60) = 0
+Thu Dec 28 13:36:39 2017.500766 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 282
+Thu Dec 28 13:36:39 2017.500771 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.500819 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.500826 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.500853 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings", 0x7fff7fcce570) = 0
+Thu Dec 28 13:36:39 2017.500863 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings", 0x7fff7fcd15c0) = 0
+Thu Dec 28 13:36:39 2017.500870 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings/codecs", 0x7fff7fcd1780) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500878 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/codecs.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.500961 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/codecsmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.501013 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/codecs.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.501059 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/codecs.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.501113 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/codecs", 0x7fff7fcd1780) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.501140 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/codecs.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.501196 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/codecsmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.501242 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/codecs.py", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.501287 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd28f0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.501294 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/codecs.pyc", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.501362 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd2740) = 0
+Thu Dec 28 13:36:39 2017.501378 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.501386 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.501396 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd27e0) = 0
+Thu Dec 28 13:36:39 2017.501404 python@7f22d8c887e0[13244] read(6, 0x1f7f8a8, 28672) = 28672
+Thu Dec 28 13:36:39 2017.501420 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 3834
+Thu Dec 28 13:36:39 2017.501425 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.501591 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.501600 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.501789 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.501806 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings/encodings", 0x7fff7fcd1780) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.501817 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/encodings.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.501897 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/encodingsmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.501961 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/encodings.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502019 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/encodings.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.502076 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings/aliases", 0x7fff7fcd1770) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502084 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/aliases.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502141 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/aliasesmodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502189 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/aliases.py", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.502246 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd28e0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502264 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/aliases.pyc", O_RDONLY) = 6
+Thu Dec 28 13:36:39 2017.502331 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd2730) = 0
+Thu Dec 28 13:36:39 2017.502339 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.502347 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 4096
+Thu Dec 28 13:36:39 2017.502357 python@7f22d8c88154[13244] fstat(6, 0x7fff7fcd27d0) = 0
+Thu Dec 28 13:36:39 2017.502395 python@7f22d8c887e0[13244] read(6, 0x1f8d9c8, 4096) = 4096
+Thu Dec 28 13:36:39 2017.502401 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 578
+Thu Dec 28 13:36:39 2017.502416 python@7f22d8c887e0[13244] read(6, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.502504 python@7f22d8c88e90[13244] close(6) = 0
+Thu Dec 28 13:36:39 2017.502512 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.502547 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.502563 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings/__builtin__", 0x7fff7fcd1780) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502573 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/__builtin__.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502648 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/__builtin__module.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502710 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/__builtin__.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502766 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/__builtin__.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.502858 python@7f22d8c88e90[13244] close(3) = 0
+Thu Dec 28 13:36:39 2017.502887 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/encodings/utf_8", 0x7fff7fcd1a30) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502896 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/utf_8.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.502961 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/utf_8module.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.503029 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/utf_8.py", O_RDONLY) = 3
+Thu Dec 28 13:36:39 2017.503086 python@7f22d8c88154[13244] fstat(3, 0x7fff7fcd2ba0) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.503094 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/encodings/utf_8.pyc", O_RDONLY) = 5
+Thu Dec 28 13:36:39 2017.503158 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd29f0) = 0
+Thu Dec 28 13:36:39 2017.503165 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.503181 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 1966
+Thu Dec 28 13:36:39 2017.503190 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd2a90) = 0
+Thu Dec 28 13:36:39 2017.503196 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.503219 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.503236 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.503307 python@7f22d8c88e90[13244] close(3) = 0
+Thu Dec 28 13:36:39 2017.503350 python@7f22d8c8d869[13244] ioctl(0, 21505, 0x7fff7fcd2f90) = 0
+Thu Dec 28 13:36:39 2017.503359 python@7f22d8c8d869[13244] ioctl(1, 21505, 0x7fff7fcd2f90) = 0
+Thu Dec 28 13:36:39 2017.503364 python@7f22d8c8d869[13244] ioctl(2, 21505, 0x7fff7fcd2f90) = 0
+Thu Dec 28 13:36:39 2017.503371 python@7f22d8c89f17[13244] readlink("mal.py", 0x7fff7fcd0180, 4096) = -22 (EINVAL)
+Thu Dec 28 13:36:39 2017.503410 python@7f22d8c89102[13244] getcwd(0x7fff7fccf180, 4096) = 36
+Thu Dec 28 13:36:39 2017.503419 python@7f22d8c881a5[13244] lstat("/home/qq_h33_vc01/fifo/netlink/demo/mal.py", 0x7fff7fccf0a0) = 0
+Thu Dec 28 13:36:39 2017.503434 python@7f22d8c88105[13244] stat("mal.py", 0x7fff7fccff00) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.503441 python@7f22d8c885a0[13244] open("mal.py", O_RDONLY) = 3
+Thu Dec 28 13:36:39 2017.503514 python@7f22d8c88154[13244] fstat(3, 0x7fff7fccfc90) = 0
+Thu Dec 28 13:36:39 2017.503521 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.503529 python@7f22d8c88154[13244] fstat(3, 0x7fff7fccfd60) = 0
+Thu Dec 28 13:36:39 2017.503534 python@7f22d8c97380[13244] lseek(3, 0, SEEK_SET) = 0
+Thu Dec 28 13:36:39 2017.503550 python@7f22d8c887e0[13244] read(3, 0x7f22d9e72000, 75) = 75
+Thu Dec 28 13:36:39 2017.503784 python@7f22d8c887e0[13244] read(3, 0x7f22d9e72000, 4096) = 22
+Thu Dec 28 13:36:39 2017.503791 python@7f22d8c88e90[13244] close(3) = 0
+Thu Dec 28 13:36:39 2017.503798 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.503818 python@7f22d8c88105[13244] stat("mal.py", 0x7fff7fcd2f50) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.503827 python@7f22d8c885a0[13244] open("mal.py", O_RDONLY) = 3
+Thu Dec 28 13:36:39 2017.503894 python@7f22d8c88154[13244] fstat(3, 0x7fff7fcd3220) = 0
+Thu Dec 28 13:36:39 2017.503901 python@7f22d8c8d869[13244] ioctl(3, 21505, 0x7fff7fcd3110) = -25 (ENOTTY)
+Thu Dec 28 13:36:39 2017.503912 python@7f22d8c97380[13244] lseek(3, 0, SEEK_CUR) = 0
+Thu Dec 28 13:36:39 2017.503917 python@7f22d8c88154[13244] fstat(3, 0x7fff7fcd3030) = 0
+Thu Dec 28 13:36:39 2017.503923 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.503932 python@7f22d8c887e0[13244] read(3, 0x7f22d9e72000, 4096) = 97
+Thu Dec 28 13:36:39 2017.503942 python@7f22d8c97380[13244] lseek(3, 0, SEEK_SET) = 0
+Thu Dec 28 13:36:39 2017.503950 python@7f22d8c8dfec[13244] brk(0x0) = 33116160
+Thu Dec 28 13:36:39 2017.503955 python@7f22d8c8dfec[13244] brk(0x1fb9000) = 33263616
+Thu Dec 28 13:36:39 2017.503962 python@7f22d8c887e0[13244] read(3, 0x7f22d9e72000, 4096) = 97
+Thu Dec 28 13:36:39 2017.504010 python@7f22d8c887e0[13244] read(3, 0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.504015 python@7f22d8c8dfec[13244] brk(0x0) = 33263616
+Thu Dec 28 13:36:39 2017.504019 python@7f22d8c8dfec[13244] brk(0x0) = 33263616
+Thu Dec 28 13:36:39 2017.504022 python@7f22d8c8dfec[13244] brk(0x1fb0000) = 33226752
+Thu Dec 28 13:36:39 2017.504029 python@7f22d8c8dfec[13244] brk(0x0) = 33226752
+Thu Dec 28 13:36:39 2017.504055 python@7f22d8c88e90[13244] close(3) = 0
+Thu Dec 28 13:36:39 2017.504063 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.504115 python@7f22d8c88105[13244] stat("/home/qq_h33_vc01/fifo/netlink/demo", 0x7fff7fcce830) = 0
+Thu Dec 28 13:36:39 2017.504127 python@7f22d8c88105[13244] stat("/home/qq_h33_vc01/fifo/netlink/demo", 0x7fff7fcd1880) = 0
+Thu Dec 28 13:36:39 2017.504134 python@7f22d8c88105[13244] stat("/home/qq_h33_vc01/fifo/netlink/demo/time", 0x7fff7fcd1a40) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504143 python@7f22d8c885a0[13244] open("/home/qq_h33_vc01/fifo/netlink/demo/time.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504217 python@7f22d8c885a0[13244] open("/home/qq_h33_vc01/fifo/netlink/demo/timemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504286 python@7f22d8c885a0[13244] open("/home/qq_h33_vc01/fifo/netlink/demo/time.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504359 python@7f22d8c885a0[13244] open("/home/qq_h33_vc01/fifo/netlink/demo/time.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.504424 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/time", 0x7fff7fcd1a40) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504433 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/time.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504484 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/timemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504535 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/time.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504580 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/time.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.504625 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/plat-linux2/time", 0x7fff7fcd1a40) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504633 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/time.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504679 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/timemodule.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504729 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/time.py", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504774 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/plat-linux2/time.pyc", O_RDONLY) = -2 (ENOENT)
+Thu Dec 28 13:36:39 2017.504833 python@7f22d8c88105[13244] stat("/usr/lib64/python2.7/lib-dynload/time", 0x7fff7fcd1a40) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504851 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/time.so", O_RDONLY) = -2 (ENOENT)
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504898 python@7f22d8c885a0[13244] open("/usr/lib64/python2.7/lib-dynload/timemodule.so", O_RDONLY) = 3
+Thu Dec 28 13:36:39 2017.504955 python@7f22d8c88154[13244] fstat(3, 0x7fff7fcd2970) = 0
+Thu Dec 28 13:36:39 2017.504964 python@7f22d9677e39[13244] futex(0x7f22d966a0d0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.504979 python@7f22d9c6bdf7[13244] open("/usr/lib64/python2.7/lib-dynload/timemodule.so", O_RDONLY|O_CLOEXEC) = 5
+Thu Dec 28 13:36:39 2017.505031 python@7f22d9c6be17[13244] read(5, 0x7fff7fcd21c0, 832) = 832
+Thu Dec 28 13:36:39 2017.505038 python@7f22d9c6bd84[13244] fstat(5, 0x7fff7fcd2060) = 0
+Thu Dec 28 13:36:39 2017.505047 python@7f22d9c6bf5a[13244] mmap2(0x0, 2119512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x7f22d2470000
+Thu Dec 28 13:36:39 2017.505057 python@7f22d9c6bff7[13244] mprotect(0x7f22d2474000, 2093056, PROT_NONE) = 0
+Thu Dec 28 13:36:39 2017.505067 python@7f22d9c6bf5a[13244] mmap2(0x7f22d2673000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 12288) = 0x7f22d2673000
+Thu Dec 28 13:36:39 2017.505094 python@7f22d9c6bf07[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.505127 python@7f22d9c6bff7[13244] mprotect(0x7f22d2673000, 4096, PROT_READ) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.505156 python@7f22d8c885a0[13244] open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 5
+Thu Dec 28 13:36:39 2017.505228 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd2aa0) = 0
+Thu Dec 28 13:36:39 2017.505233 python@7f22d8c88154[13244] fstat(5, 0x7fff7fcd28e0) = 0
+Thu Dec 28 13:36:39 2017.505239 python@7f22d8c9199a[13244] mmap2(0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f22d9e72000
+Thu Dec 28 13:36:39 2017.505247 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 774
+Thu Dec 28 13:36:39 2017.505258 python@7f22d8c97380[13244] lseek(5, -481, SEEK_CUR) = 293
+Thu Dec 28 13:36:39 2017.505262 python@7f22d8c887e0[13244] read(5, 0x7f22d9e72000, 4096) = 481
+Thu Dec 28 13:36:39 2017.505271 python@7f22d8c88e90[13244] close(5) = 0
+Thu Dec 28 13:36:39 2017.505299 python@7f22d8c91a27[13244] munmap(0x7f22d9e72000, 4096) = 0
+Thu Dec 28 13:36:39 2017.505341 python@7f22d8c88105[13244] stat("/etc/localtime", 0x7fff7fcd2aa0) = 0
+Thu Dec 28 13:36:39 2017.505381 python@7f22d8c88e90[13244] close(3) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.505397 python@7f22d9679e90[13244] open("new", O_RDONLY|O_CREAT, 0777) = 3
+Thu Dec 28 13:36:39 2017.505580 python@7f22d9679750[13244] close(3) = 0
+pid 13238
+6Entering: hello_nl_recv_msg
+6Netlink received msg payload:H
+Thu Dec 28 13:36:39 2017.505832 python@7f22d8c89f77[13244] unlink("new") = 0

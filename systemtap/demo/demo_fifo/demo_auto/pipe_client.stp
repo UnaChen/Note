@@ -1,0 +1,319 @@
+/****** for kfifo ******/
+%{
+#include <linux/init.h>
+#include <linux/module.h>
+#include <linux/proc_fs.h>
+#include <linux/mutex.h>
+#include <linux/kfifo.h>
+#include <linux/delay.h>
+
+#define FIFO_SIZE	128
+#define	PROC_FIFO	"stp-fifo"
+static DEFINE_MUTEX(read_lock);
+static DEFINE_MUTEX(write_lock);
+/* struct STRUCT_KFIFO_REC_1 can handle: 0- 255 bytes.
+ * struct STRUCT_KFIFO_REC_2 can handle: 0- 65535 bytes.*/
+typedef STRUCT_KFIFO_REC_1(FIFO_SIZE) mykfifo;
+static mykfifo stpFIFO;
+
+static int stpfifo_send(char *buf)
+{
+	unsigned int ret;
+	unsigned int buflen = strlen(buf);
+	char bufcheck[buflen];
+		
+	kfifo_in(&stpFIFO, buf, strlen(buf));
+
+	/* check the correctness of all values in the fifo */
+	ret = kfifo_out_peek(&stpFIFO, buf, sizeof(buf));
+	if ( ret < 0 || strcmp(bufcheck, buf) )
+		return -EIO;
+
+	return 0;
+}
+
+static ssize_t fifo_write(struct file *file, const char __user *buf,
+						size_t count, loff_t *ppos)
+{
+	int ret;
+	unsigned int copied;
+
+	if (mutex_lock_interruptible(&write_lock))
+		return -ERESTARTSYS;
+
+	ret = kfifo_from_user(&stpFIFO, buf, count, &copied);
+
+	mutex_unlock(&write_lock);
+
+	return ret ? ret : copied;
+}
+
+static ssize_t fifo_read(struct file *file, char __user *buf,
+						size_t count, loff_t *ppos)
+{
+	int ret;
+	unsigned int copied;
+
+	if (mutex_lock_interruptible(&read_lock))
+		return -ERESTARTSYS;
+
+	ret = kfifo_to_user(&stpFIFO, buf, count, &copied);
+
+	mutex_unlock(&read_lock);
+
+	return ret ? ret : copied;
+}
+
+static const struct file_operations fifo_fops = {
+	.owner		= THIS_MODULE,
+	.read		= fifo_read,
+	.write		= fifo_write,
+	.llseek		= noop_llseek,
+};
+
+static int stpfifo_init(void)
+{
+	INIT_KFIFO(stpFIFO);
+
+	if (proc_create(PROC_FIFO, 0, NULL, &fifo_fops) == NULL) {
+		return -ENOMEM;
+	}
+	return 0;
+}
+
+static void stpfifo_exit(void)
+{
+	remove_proc_entry("stp-fifo", NULL);
+}
+%}
+
+
+/****** for signal ******/
+%{
+/* we choose 44 as our signal number 
+(real-time signals are in the range of 33 to 64)*/
+#define SIG_STPFIFO 44	
+struct siginfo info;
+
+static int stpksig_init(void)
+{	
+	/* prepare the signal */
+	memset(&info, 0, sizeof(struct siginfo));
+	info.si_signo = SIG_STPFIFO;
+	info.si_code = SI_QUEUE;
+	return 0;
+}
+
+static int stpksig_send(int pid)
+{	
+	int ret;
+	struct task_struct *t;
+
+	rcu_read_lock();
+	t = pid_task(find_pid_ns(pid, &init_pid_ns), PIDTYPE_PID);	
+	if(t == NULL){
+		_stp_printf("[ERROR] no such pid\n");
+		rcu_read_unlock();
+		return -ENODEV;
+	}
+	rcu_read_unlock();
+
+	/* send the signal */
+	ret = send_sig_info(SIG_STPFIFO, &info, t);    //send the signal
+	if (ret < 0) {
+		_stp_printf("[ERROR] error sending signal\n");
+		return ret;
+	}
+	return 0;
+}
+%}
+
+
+%{
+#include <linux/semaphore.h>
+#define	PROC_SEM "stp-sem"
+struct semaphore sem;
+
+static ssize_t sem_write(struct file *filea, const char __user *buf,
+		size_t count, loff_t *ppos)
+{
+	up(&sem);
+	return 0;
+}
+static const struct file_operations sem_fops = {
+	.write		= sem_write,
+	.llseek		= noop_llseek,
+};
+
+static int stpsem_init(void){
+	sema_init(&sem, 0);
+	if (proc_create(PROC_SEM, 0, NULL, &sem_fops) == NULL) {
+		return -ENOMEM;
+	}
+	return 0;
+}
+static void stpsem_exit(void){
+	remove_proc_entry(PROC_SEM, NULL);	
+}
+%}
+
+/* Copyright (C) 2015-2017 Cuckoo Foundation.
+ # This file is part of Cuckoo Sandbox - http://www.cuckoosandbox.org
+ # See the file 'docs/LICENSE' for copying permission.
+ #
+ # Based on the Systemtap "strace.stp" example, adapted to our needs
+ */
+
+/* configuration options; set these with stap -G */
+global sig_pid = 0      /* target pid for sending signal */
+global timestamp = 1     /* -Gtimestamp=0 means don't print a syscall timestamp */
+
+global thread_argstr%
+global thread_scname%
+global thread_time%
+
+global syscalls_nonreturn
+probe begin  {
+    /* list those syscalls that never .return */
+    syscalls_nonreturn["exit"] = 1
+    syscalls_nonreturn["exit_group"] = 1
+    /* prepare for pipe  */
+    sig_pid = target()
+    //sig_pid = 16387
+    func_init()
+	printf("start...\n")
+}
+
+probe end {
+	func_exit()	
+	//printf("normal end\n");
+}
+
+probe error {
+	func_exit()	
+	//printf("error end\n");
+}
+
+/*probe nd_syscall.unlink{
+	if (pid() == target()) next         # skip our own helper process
+	if (!target_set_pid(pid())) next    # skip unrelated processes
+	pipe_out (name, thread_argstr[tid()], "NON")
+}
+
+probe nd_syscall.open.return{
+	if (pid() == target()) next         # skip our own helper process
+	if (!target_set_pid(pid())) next    # skip unrelated processes
+	pipe_out (name, thread_argstr[tid()], retstr)
+}*/
+
+probe nd_syscall.* {
+    if (pid() == target()) next         # skip our own helper process
+    if (!target_set_pid(pid())) next    # skip unrelated processes
+
+    t = tid()
+    if (name == "unlink"){
+	pipe_out (name, argstr, "NON")
+    }
+
+    /* last syscall that could've returned didn't */
+    if (thread_argstr[t] != "")
+        report(thread_scname[t], thread_argstr[t], "")
+
+    thread_argstr[t] = argstr
+    thread_scname[t] = name
+
+    if (timestamp)
+        thread_time[t] = gettimeofday_us()
+
+    if (name in syscalls_nonreturn)
+        report(name, argstr, "")
+}
+
+probe nd_syscall.*.return {
+    if (pid() == target()) next         # skip our own helper process
+    if (!target_set_pid(pid())) next    # skip unrelated processes
+    if (name == "open"){
+	    pipe_out (name, thread_argstr[tid()], retstr)
+    }		    
+    
+    report(name, thread_argstr[tid()], retstr)
+}
+
+function report(syscall_name, syscall_argstr, syscall_retstr) {
+    t = tid()
+
+    if (timestamp) {
+        then = thread_time[t]
+
+        if (timestamp)
+            prefix = sprintf("%s.%06d ", ctime(then / 1000000), then % 1000000)
+
+        delete thread_time[t]
+    }
+
+    /* add a thread-id string in lots of cases, except if
+       stap strace.stp -c SINGLE_THREADED_CMD */
+    if (tid() != target()) {
+        prefix .= sprintf("%s@%x[%d] ", execname(), uaddr(), t)
+    }
+
+    syscall_argstr = str_replace(syscall_argstr, "(", "\\x28")
+    syscall_argstr = str_replace(syscall_argstr, ")", "\\x29")
+
+    if (syscall_retstr == "")
+        printf("%s%s(%s)\n", prefix, syscall_name, syscall_argstr)
+    else
+        printf("%s%s(%s) = %s\n", prefix, syscall_name, syscall_argstr, syscall_retstr)
+
+    delete thread_argstr[t]
+    delete thread_scname[t]
+}
+
+function pipe_out(syscall_name, syscall_argstr, syscall_retstr){
+	msg_str = syscall_name."==".syscall_argstr."==".syscall_retstr
+	send_msg(msg_str)
+	send_sig(sig_pid)
+	sem_wait()
+}
+
+function func_init() %{
+	int init_fifo = stpfifo_init();
+	int init_ksig = stpksig_init();
+	int init_sem = stpsem_init();
+	
+	if (init_fifo < 0 || init_ksig < 0 || init_sem < 0){
+		if (init_fifo < 0)
+			_stp_printf("open kfifo error!\n");
+		if (init_ksig < 0)
+			_stp_printf("open ksig error!\n");
+		if (init_sem < 0)
+			_stp_printf("open semaphore error!\n");
+		STAP_ERROR("[ERROR_MSG] initialize fifo/sig/sem fail\n");
+	}
+	//_stp_printf("--- INIT FIN ---\n");
+%}
+
+function func_exit() %{
+	stpfifo_exit();	
+	stpsem_exit();
+%}
+
+function send_sig (argpid)%{
+	int pid = STAP_ARG_argpid;	
+	stpksig_send(pid);
+%}
+
+function send_msg (argmsg)%{
+	char *msg = STAP_ARG_argmsg;	
+		stpfifo_send(msg);
+%}
+
+function sem_wait()%{
+	down(&sem); 
+%}
+
+
+
+
+
+
